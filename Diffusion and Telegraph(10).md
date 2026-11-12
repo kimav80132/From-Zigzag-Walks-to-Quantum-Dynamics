@@ -3548,4 +3548,4 @@ What is claimed as derived, then, is derived *from these*; where a section says 
 2. **The walker that is not one clock.** IV.5b’s \\(\\gamma\\neq0\\): a walker that has neither sums only nor differences only in any running detectors. Not treated.
 3. **The neutral walker.** A walker in the original detectors alone cannot be turned by a field (III.15e (B)). What it is as a particle is not treated.
 4. **The particle at a vertex.** What the walker of VI.7 is at a vertex. Not treated.
-5. **Gravity.** A change of speed by sense is a change of the light cone (V.1, third row), and a tilt of the step matrices is a local frame (V.3). Neither is followed.
+5. **Gravity.** A change of speed by sense is a change of the light cone (V.1, third row), and a tilt of the step matrices is a local frame (V.3).A thermodynamic link maybe.
