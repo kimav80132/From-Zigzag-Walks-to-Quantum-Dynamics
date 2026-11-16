@@ -3623,3 +3623,40 @@ What is claimed as derived, then, is derived *from these*; where a section says 
 5. **Gravity.** Two places in the document touch it: a change of speed by sense is a change of the light cone (V.1, third row), and a tilt of the step matrices is a local frame (V.3). Neither is followed. A third route is thermodynamic (T. Jacobson, *Phys. Rev. Lett.* 75, 1260 (1995), arXiv:gr-qc/9504004). If the settled configuration has an entropy across any edge that goes as the edge’s area, and an accelerated detector reads a temperature, then “heat = temperature × change of entropy”, asked at every edge, gives Einstein’s equation. What that needs from the walk: the entropy of a region of the settled configuration, which VI.8 (E) has in one dimension (a third of a logarithm per edge, stopping at the Compton length); the same in three dimensions, where the two ends become a surface, which is not done; and the temperature an accelerated detector reads, for which VI.8 (B) has only the closed clock.
 6. **How many slots are filled.** The vacuum’s energy is \\(-\\tfrac12\\operatorname{Tr}|H|\\), a sum over every slot (VI.4 (8)), and that the count selects this configuration is taken (input 18). Summed down to a shortest length, such a sum exceeds the energy density observed in empty space by a factor of about \\(10^{55}\\) (cut at \\(100\\) GeV) to about \\(10^{123}\\) (cut at the Planck length). What fixes the number of settled walkers is not treated. One back-of-envelope estimate, recorded for how it fails: one settled walker per particle of matter, \\(|E|=mc^2\\) each, gives the rest-energy density of matter, \\(2.4\\times10^{-10}\\ \\mathrm{J/m^3}\\) (\\(3.8\\times10^{-11}\\) for baryons alone, \\(0.25\\) per cubic metre), against \\(5.3\\times10^{-10}\\ \\mathrm{J/m^3}\\) observed: within a factor of \\(2\\) to \\(14\\). It is not an answer, for three reasons. It restates that the two densities are comparable today, and they were not earlier: matter was \\(3.7\\) times larger at redshift \\(1\\) and \\(29\\) times at redshift \\(3\\). The settled energy is negative. And matter is the leading loops, not the settled ones (VI.7). (Densities from the parameters of Planck Collaboration, “Planck 2018 results. VI. Cosmological parameters”, arXiv:1807.06209: \\(H_0=67.4\\) km/s/Mpc, \\(\\Omega_m=0.315\\), \\(\\Omega_bh^2=0.0224\\). `scripts/napkin_vacuum_estimate.py`: arithmetic only.)
 7. ** Non abelian include reflection not just rotation types of preservation, refleciton -> mass making .
+somethign of the sort:
+Step 1. The electromagnetic lines you have (III.8c (10a)). The four detectors $r = (u_+, u_-, v_+, v_-)$:
+
+$$\partial_t r = \Big[-\mathbb A\,\partial_x + a\,\mathbb T - \big(\Phi - \mathbb A\,A_x\big)\,\mathbb J\Big]\,r$$
+
+Direction matrix, flip, and the field multiplying the one turn $\mathbb J$.
+
+Step 2. Add one index. Two kinds of walker, $R = (r_1, r_2)$. The usual theory replaces the single turn by three. Written with real matrices on the two kinds:
+
+$$G_1 = \begin{pmatrix} 0 & \mathbb J \\ \mathbb J & 0 \end{pmatrix}, \qquad G_2 = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}, \qquad G_3 = \begin{pmatrix} \mathbb J & 0 \\ 0 & -\mathbb J \end{pmatrix}$$
+
+and the lines become
+
+$$\partial_t R = \Big[-\mathbb A\,\partial_x + a\,\mathbb T - \sum_{a=1}^{3}\big(\Phi^a - \mathbb A\,A_x^a\big)\,\tfrac12 G_a\Big]\,R$$
+
+Step 3. What that gives in the walk. All checked.
+
+Each $G_a$ is a turn, and each commutes with the direction matrix and with the flip. So the flip rate is untouched. Nothing sticks here.
+$G_3$ turns the two kinds in opposite senses, like two opposite charges.
+$G_1$ and $G_2$ move amount from one kind to the other. The count of one kind alone is no longer conserved. The total is.
+They do not commute: $G_1G_2 - G_2G_1 = -2\,G_3$, and so on round. So the order of the turns along a path matters.
+Re-labelling at each event still does nothing, but only if the “field” is counted with one extra term:
+$$F = \partial_t A_x - \partial_x A_t - \big(A_t A_x - A_x A_t\big)$$
+
+In my check, a pure re-labelling gave $0.039$ without the last term and $3\times10^{-10}$ with it. That extra term is the potentials acting on each other, which is the carriers turning carriers.
+
+Step 4. Where it sticks. The usual weak field acts on one handedness only. In one dimension handedness is the time sense, so that is a turn $h$ applied to the forward counters alone. Call $P_+$ and $P_-$ the forward and backward counters. Such a turn commutes with the direction matrix but not with the flip, and after it the flip is no longer $\mathbb T$:
+
+$$\mathbb T \;\to\; \mathbb T\,\big(P_+\,h^{-1} + P_-\,h\big)$$
+
+In words: a flip out of the forward counters now lands on a mixture of the two kinds, turned by $h^{-1}$. If $h$ differs from place to place, so does that mixture.
+
+So for the re-labelling freedom to survive, the flip term cannot stay $a\,\mathbb T$ with $a$ a number. It has to be
+
+$$a\,\mathbb T\,\big(P_+\,M(x)^{-1} + P_-\,M(x)\big)$$
+
+with $M(x)$ a matrix on the kinds at each event, which changes when the labels are changed. That $M(x)$ is what the usual theory supplies as a separate field.
