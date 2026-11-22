@@ -3660,3 +3660,61 @@ So for the re-labelling freedom to survive, the flip term cannot stay $a\,\mathb
 $$a\,\mathbb T\,\big(P_+\,M(x)^{-1} + P_-\,M(x)\big)$$
 
 with $M(x)$ a matrix on the kinds at each event, which changes when the labels are changed. That $M(x)$ is what the usual theory supplies as a separate field.
+
+8**. The Lagrangian
+
+Take the $z$–$t$ part of the potential, $\phi$ and $A_z$, depending on $z$ and $t$. Keep the gauge part $s$ in the Lagrangian:
+
+$$L_0=\tfrac12\,(E_z^2-s^2),\qquad E_z=-\partial_z\phi-\partial_tA_z,\quad s=\partial_t\phi+\partial_zA_z .$$
+
+In the two polarizations $P_\mp=\phi\mp A_z$ this is
+
+$$L_0=-\tfrac12\,f\,b,\qquad f=(\partial_t-\partial_z)P_-,\qquad b=(\partial_t+\partial_z)P_+ .$$
+2. Its equations
+$$(\partial_t+\partial_z)\,f=0,\qquad(\partial_t-\partial_z)\,b=0 .$$
+
+Two amounts streaming at $c$, and nothing joins them.
+
+3. The gauge freedom
+$$P_-\to P_-+g(z+t),\qquad P_+\to P_++h(z-t)$$
+
+changes neither $f$ nor $b$. So the freedom is a free amount going backward, and one going forward, that the fields never see.
+
+4. The generator of time translations
+
+Write what one moment does to the pair $(f,P_-)$:
+
+$$\partial_tf=-\partial_zf+\boxed{0}\cdot P_-,\qquad\partial_tP_-=+\partial_zP_-+\boxed{1}\cdot f .$$
+
+The field feeds the potential. The potential does not feed the field. That zero is the gauge freedom: the field does not care what the potential is.
+
+5. Put the flip in: fill the zero
+
+Add the one term that makes the field depend on the potential itself:
+
+$$L_a=\tfrac{a^2}{2}\,A_\mu A^\mu=\tfrac{a^2}{2}\,(\phi^2-A_z^2).$$
+
+The equations become
+
+$$(\partial_t+\partial_z)\,f=-a^2P_-,\qquad(\partial_t-\partial_z)\,b=-a^2P_+ .$$
+
+The freedom of step 3 is gone, because $L_a$ is not invariant under it. This is the rule for $a$.
+
+6. The second counter
+
+Call $Q_+=f$ and $Q_-=-a\,P_-$. Then
+
+$$\partial_tQ_+=-\partial_zQ_++a\,Q_-,\qquad\partial_tQ_-=+\partial_zQ_--a\,Q_+ .$$
+
+These are Part III's two lines exactly. One of them is just the definition of the field. The other is the Euler–Lagrange equation.
+
+So:
+
+The forward counter is the field.
+The backward counter is the potential. The potential streams the opposite way to its field, which is why exchanging them reverses the time sense.
+The gauge freedom is the backward counter with the flip switched off. With $a=0$ it is a free amount nobody reads. With $a\neq0$ it feeds the forward counter.
+7. In three dimensions
+
+The same construction, with field $\psi$ and potential $\chi$:
+
+$$\partial_t\psi=-c\,\boldsymbol\sigma\cdot\nabla\psi-a\,\chi,\qquad\partial_t\chi=+c\,\boldsymbol\sigma\cdot\nabla\chi+a\,\psi .$$
