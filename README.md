@@ -16,7 +16,8 @@ walkers and Bell's inequality, and to the vacuum.
 
 | If you have | Read |
 |---|---|
-| ten minutes | `notes/walk_to_dirac_propagator_1plus1.pdf`: six pages, one space dimension, from the walk to the Dirac propagator, in standard notation |
+| ten minutes | `notes/walk_to_dirac_propagator_1plus1.pdf`: seven pages, one space dimension, from the walk to the Dirac propagator. Every step is on real counters, with the usual formula quoted beside it |
+| ten minutes, in the usual notation | `notes/walk_to_dirac_propagator_1plus1_usual_symbols.pdf`: six pages, the same note with its last part written with *i*, as physicists usually read it |
 | an afternoon | `Diffusion and Telegraph(13).md`: the main document, in six parts |
 | an interest in sums | `Go-and-come-back sums Euler–Maclaurin, zeta and the Casimir energy(13).md`: the companion document |
 
@@ -74,9 +75,10 @@ What a check is, and is not:
 - A passing script shows that the computation it contains is right. Whether that computation is the one
   the text claims is a separate question, and it is the one an audit should ask.
 
-Three scripts in `notes/` check the six-page note: `walk_to_propagator_page_checks.py` (its formulas),
-`note_figures_three_walks_and_lattice_sum.py` (what its two figures show; with `--write` it redraws them) and
-`walk_lines_against_ord_mann_eq6.py` (its equations against those of Ord and Mann, 2003).
+Four scripts in `notes/` check the note: `walk_to_propagator_page_checks.py` (its formulas, in both versions: 25 checks,
+the steps on four real counters each against the usual complex form), `note_figures_three_walks_and_lattice_sum.py`
+(what its two figures show; with `--write` it redraws them), `walk_lines_against_ord_mann_eq6.py` (its equations against
+those of Ord and Mann, 2003) and `real_corners_against_feynmans_i.py` (its real corner weights against Feynman's imaginary one).
 
 ## For an automated audit
 
