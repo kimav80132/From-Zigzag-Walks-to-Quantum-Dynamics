@@ -74,7 +74,9 @@ What a check is, and is not:
 - A passing script shows that the computation it contains is right. Whether that computation is the one
   the text claims is a separate question, and it is the one an audit should ask.
 
-`notes/walk_to_propagator_page_checks.py` checks the formulas of the six-page note.
+Three scripts in `notes/` check the six-page note: `walk_to_propagator_page_checks.py` (its formulas),
+`note_figures_three_walks_and_lattice_sum.py` (what its two figures show; with `--write` it redraws them) and
+`walk_lines_against_ord_mann_eq6.py` (its equations against those of Ord and Mann, 2003).
 
 ## For an automated audit
 
